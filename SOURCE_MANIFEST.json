@@ -1,0 +1,895 @@
+{
+  "source_commit": "7f7c4c12970b3dddf58106a6182f1f62dd554e19",
+  "sha256": "68a20c8efe7d7c970a5e28e1bffeb7ff28bb8080305c910a369dd049ed7ed9a8",
+  "file_count": 222,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "5ca3c39bdc1288c108a1931b3f6bc5795464b6253e9457390617774259deed0c"
+    },
+    {
+      "path": ".npmrc",
+      "sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d"
+    },
+    {
+      "path": ".openai/hosting.json",
+      "sha256": "ee33299937f3b25befda27d41f0192d0b8870a8b7e6d74ea40fa646640433627"
+    },
+    {
+      "path": "CONTENT_SOURCES.md",
+      "sha256": "aec73ed51cf223688b3e48d55e135c94a4a4340cbe213713d1fed54e75996d8f"
+    },
+    {
+      "path": "EMAIL_SETUP.md",
+      "sha256": "a12b302633074dfcf1e34e07eecf627a79af657771a585d3e9120e65c4b056d1"
+    },
+    {
+      "path": "ENQUIRIES.md",
+      "sha256": "7821777348d066f9140ef958468f1f1130dc32e8ab8aaf1caac7f7cdbc1cc1cb"
+    },
+    {
+      "path": "LANDSCAPE_SOURCES.json",
+      "sha256": "b53ff0fec1aecec08c752d0c5bc93080d4a8950dffb2a6a12c1a2c243dff266c"
+    },
+    {
+      "path": "LAUNCH_NOTES.md",
+      "sha256": "28db95bd1ceb24ee5e5e29d626dd624647857faee5486c155251ab780cd09b58"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6a8169063d2b024fcbe791837621e0f2bd9863968b5d654d2a0975e76e2ad7f8"
+    },
+    {
+      "path": "app/api/enquiries/notifications/route.ts",
+      "sha256": "58a25803cfed496421a19302f4274dba7ef1c4c2c25b5fd26984419a127d5320"
+    },
+    {
+      "path": "app/api/enquiries/route.ts",
+      "sha256": "3a1be2d86f7d796271771da4fbeb9b39dd8feae8ebb2aace529409920f10639f"
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+    },
+    {
+      "path": "app/enquiries/route.ts",
+      "sha256": "0797594b08bb0d6079134a0c89f456d6c881a4722d2b2a175e4d0fc244202292"
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "8546d9b115f0addd582f7ceaaa6b1c069310bcc77c43ee7b8acfe0020be3afd7"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "dda6dbba05daf59cd2e5b459b9cd825cbf3cc3928af086d28678725c4264cb18"
+    },
+    {
+      "path": "app/route.ts",
+      "sha256": "704679d246d38ee73aab4c0d1d5ee0676af42e0cddee87f72607179071c8153a"
+    },
+    {
+      "path": "cloudflare-env.d.ts",
+      "sha256": "3e0e92dd94f20beb72a25b7126bd20c180fda5ba470a83262bdcc9098e2b8dc9"
+    },
+    {
+      "path": "components.json",
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
+    },
+    {
+      "path": "components/connector-error.tsx",
+      "sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155"
+    },
+    {
+      "path": "components/ui/accordion.tsx",
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0"
+    },
+    {
+      "path": "components/ui/alert-dialog.tsx",
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311"
+    },
+    {
+      "path": "components/ui/alert.tsx",
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b"
+    },
+    {
+      "path": "components/ui/aspect-ratio.tsx",
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+    },
+    {
+      "path": "components/ui/attachment.tsx",
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790"
+    },
+    {
+      "path": "components/ui/avatar.tsx",
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97"
+    },
+    {
+      "path": "components/ui/breadcrumb.tsx",
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5"
+    },
+    {
+      "path": "components/ui/bubble.tsx",
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b"
+    },
+    {
+      "path": "components/ui/button-group.tsx",
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4"
+    },
+    {
+      "path": "components/ui/calendar.tsx",
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84"
+    },
+    {
+      "path": "components/ui/card.tsx",
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c"
+    },
+    {
+      "path": "components/ui/carousel.tsx",
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3"
+    },
+    {
+      "path": "components/ui/chart.tsx",
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27"
+    },
+    {
+      "path": "components/ui/collapsible.tsx",
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "path": "components/ui/combobox.tsx",
+      "sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735"
+    },
+    {
+      "path": "components/ui/command.tsx",
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a"
+    },
+    {
+      "path": "components/ui/context-menu.tsx",
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017"
+    },
+    {
+      "path": "components/ui/dialog.tsx",
+      "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14"
+    },
+    {
+      "path": "components/ui/direction.tsx",
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+    },
+    {
+      "path": "components/ui/drawer.tsx",
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f"
+    },
+    {
+      "path": "components/ui/dropdown-menu.tsx",
+      "sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a"
+    },
+    {
+      "path": "components/ui/empty.tsx",
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0"
+    },
+    {
+      "path": "components/ui/field.tsx",
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd"
+    },
+    {
+      "path": "components/ui/form.tsx",
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e"
+    },
+    {
+      "path": "components/ui/hover-card.tsx",
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8"
+    },
+    {
+      "path": "components/ui/input-group.tsx",
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0"
+    },
+    {
+      "path": "components/ui/input-otp.tsx",
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299"
+    },
+    {
+      "path": "components/ui/input.tsx",
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db"
+    },
+    {
+      "path": "components/ui/item.tsx",
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f"
+    },
+    {
+      "path": "components/ui/kbd.tsx",
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c"
+    },
+    {
+      "path": "components/ui/marker.tsx",
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0"
+    },
+    {
+      "path": "components/ui/menubar.tsx",
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb"
+    },
+    {
+      "path": "components/ui/message-scroller.tsx",
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf"
+    },
+    {
+      "path": "components/ui/message.tsx",
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185"
+    },
+    {
+      "path": "components/ui/native-select.tsx",
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c"
+    },
+    {
+      "path": "components/ui/navigation-menu.tsx",
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044"
+    },
+    {
+      "path": "components/ui/pagination.tsx",
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1"
+    },
+    {
+      "path": "components/ui/popover.tsx",
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447"
+    },
+    {
+      "path": "components/ui/progress.tsx",
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce"
+    },
+    {
+      "path": "components/ui/resizable.tsx",
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c"
+    },
+    {
+      "path": "components/ui/scroll-area.tsx",
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043"
+    },
+    {
+      "path": "components/ui/select.tsx",
+      "sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3"
+    },
+    {
+      "path": "components/ui/separator.tsx",
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e"
+    },
+    {
+      "path": "components/ui/sheet.tsx",
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16"
+    },
+    {
+      "path": "components/ui/sidebar.tsx",
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e"
+    },
+    {
+      "path": "components/ui/skeleton.tsx",
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239"
+    },
+    {
+      "path": "components/ui/slider.tsx",
+      "sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3"
+    },
+    {
+      "path": "components/ui/sonner.tsx",
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f"
+    },
+    {
+      "path": "components/ui/spinner.tsx",
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae"
+    },
+    {
+      "path": "components/ui/table.tsx",
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46"
+    },
+    {
+      "path": "components/ui/textarea.tsx",
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979"
+    },
+    {
+      "path": "components/ui/toggle-group.tsx",
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e"
+    },
+    {
+      "path": "components/ui/toggle.tsx",
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16"
+    },
+    {
+      "path": "components/ui/tooltip.tsx",
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
+    },
+    {
+      "path": "db/index.ts",
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd"
+    },
+    {
+      "path": "db/schema.ts",
+      "sha256": "81a5dbf490eb1f03abafdda2f86d09fa258e49a95df1d322b296bb60c8f4c21a"
+    },
+    {
+      "path": "drizzle.config.ts",
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
+    },
+    {
+      "path": "drizzle/0000_majestic_post.sql",
+      "sha256": "4cb43559ce13b78ba330778a1306c570e430f7da954665aff8910dc58d35c5cd"
+    },
+    {
+      "path": "drizzle/0001_happy_nick_fury.sql",
+      "sha256": "03d07b8d217f861f114499b651fde6d153f171608a349261cdb94453cb443856"
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "sha256": "690f495b5495288a4443b55a53e26626a025f1cae411d904a091153119390d53"
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "sha256": "3587693315796111b42f3fd08353faccc4fe6aceb0b5e321a7180989e5d0016f"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "sha256": "f4ff586e7cb35a83e9dbc1eda23ed77000d6312cc364c1ba7c7d09f3f2e49dd1"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "eeda7faabe9560fa9fdb26675b0011fa78461ca7061989732f5da9245b87e315"
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909"
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454"
+    },
+    {
+      "path": "hooks/use-mobile.ts",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "path": "lib/connector-context.ts",
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e"
+    },
+    {
+      "path": "lib/connector-contract.mts",
+      "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e"
+    },
+    {
+      "path": "lib/connector-errors.mts",
+      "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871"
+    },
+    {
+      "path": "lib/connector-preview.d.ts",
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642"
+    },
+    {
+      "path": "lib/connectors.ts",
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
+    },
+    {
+      "path": "lib/enquiries-inbox.html",
+      "sha256": "b50f136372d9336ccc73d06d65611aa36162d0748a2cd2c5f50275d57483c39c"
+    },
+    {
+      "path": "lib/enquiry-access.ts",
+      "sha256": "50fcc94b63be923ae09769a5e5efab8a61a6e671b41923821a0fa084bbc6ef8f"
+    },
+    {
+      "path": "lib/enquiry-notifications.ts",
+      "sha256": "85637c30f50ce12d56cba0d7ed52386f9f38a04bdf0cb647df4649ed7fc1b94f"
+    },
+    {
+      "path": "lib/enquiry-validation.ts",
+      "sha256": "61594e818944a2fad99441d37678d4adc46445c5ee38023e9143110f70385c01"
+    },
+    {
+      "path": "lib/land-inventory.json",
+      "sha256": "5b8fd8db33c6ceba4886b15d07eb02355978951c9a5539ad8ef4e6b53f04dea5"
+    },
+    {
+      "path": "lib/raw-assets.d.ts",
+      "sha256": "a56f3f5654c8cfdc4173ddf0c72e4e8c13266d6b138311d1ebf4fda4b11de4cf"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "eedaeab6870c0f70f9db869fcaa24abae9b0f945cbc9acb8a43b6e7ed6bcbfca"
+    },
+    {
+      "path": "package.json",
+      "sha256": "eb7b53ec5bdce1db5a8576b2ffc3b63ddd8c5fdee0f97dcb341674abbf69843a"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "public/acacia-kitengela-20-acres.html",
+      "sha256": "6a931643b9b77d6b6631908d42ea17aca564f84f95166ed488254e17bb86aba7"
+    },
+    {
+      "path": "public/assets/comparison.js",
+      "sha256": "fffe8679cea35cd4595b7042e73a48bbd3a83d485712913d491a8c62d4e459bd"
+    },
+    {
+      "path": "public/assets/danlo-logo.png",
+      "sha256": "d9f351241f38c81aba64604e9e6d8beb340c85c4d08dbc63949f6f408fa5e8c7"
+    },
+    {
+      "path": "public/assets/danlo-site-visit.webp",
+      "sha256": "738b6f0470684e3262322bcdf4695cd6b7117533762f3c12210aa0b696c2ce81"
+    },
+    {
+      "path": "public/assets/enquiries-admin.js",
+      "sha256": "7fdb5de47c7ff892eff49e2f5a4932c0938d984ffd6c5cf290da1ef6184180a9"
+    },
+    {
+      "path": "public/assets/hero-gallery.js",
+      "sha256": "cd92af9cebf0bd15ec70bcad91c709f6627120cf9327e1248d6f5c2e0d18371d"
+    },
+    {
+      "path": "public/assets/image-motion.js",
+      "sha256": "3683bebbbbaede82ab46a52c14bb9340b5cc28750d588ace5e99ca31e391600f"
+    },
+    {
+      "path": "public/assets/inquiry.js",
+      "sha256": "f63c9d92356607b8b143a568fe082a5b08b68c899dcee15f53fd039426d42ba9"
+    },
+    {
+      "path": "public/assets/land-data.js",
+      "sha256": "fd5b5a01b006cfe6161e18ff8b96429bf95fb5f98e22cafa04db5b5176bb2ed5"
+    },
+    {
+      "path": "public/assets/landscapes/acacia-track.webp",
+      "sha256": "a57f6349827d2f02a99812fb650a2fa585dcbf8c82b01e27a315d03d49f8b0ad"
+    },
+    {
+      "path": "public/assets/landscapes/evening-trees.webp",
+      "sha256": "ec5d31cc3b9ff91748d0202eb3be9bd8cdb1f709326391b58e7b04cfb90bf170"
+    },
+    {
+      "path": "public/assets/landscapes/field-green.webp",
+      "sha256": "437f2eecee80ddb6cd39f630f3518135c75729cba09062ed38e0d45be54daf92"
+    },
+    {
+      "path": "public/assets/landscapes/golden-acacia.webp",
+      "sha256": "2b02445e7eb0dd8304715569971dfd5b388a555009221079c7e967ff4f547471"
+    },
+    {
+      "path": "public/assets/landscapes/grassland.webp",
+      "sha256": "f516d9a780d639cc235f1a3c902580efc2a4bc2a58201f03aefaa23bbcd3ef95"
+    },
+    {
+      "path": "public/assets/landscapes/green-hills.webp",
+      "sha256": "ddf7b056922dbbd597bbc52e012d42ea66900209d9626651e4faf4ebf35c16fc"
+    },
+    {
+      "path": "public/assets/landscapes/hill-country.webp",
+      "sha256": "d4462599fc750c6de22eff7df6cfc1162043d3e6d9579d4bbd007bbc08a2a640"
+    },
+    {
+      "path": "public/assets/landscapes/open-country.webp",
+      "sha256": "f2a7f1e8931118e597c7f83b8bf905467e40993d70fb3ab78a3badf70b08810c"
+    },
+    {
+      "path": "public/assets/landscapes/open-track.webp",
+      "sha256": "76fb89b30d4c9311ebf6d3b9a37bc800bf25b53e6d199504a644cda5aabde125"
+    },
+    {
+      "path": "public/assets/landscapes/tree-meadow.webp",
+      "sha256": "ff8828aad29c6dd02665b501a6fe05680dfe3e236ea6e5c777e65a46b91beb8d"
+    },
+    {
+      "path": "public/assets/landscapes/tree-plain.webp",
+      "sha256": "84653477e668f259932e64bd659e9277f0a38aeaa547fdb10e5943f7c9b4fbec"
+    },
+    {
+      "path": "public/assets/landscapes/winding-track.webp",
+      "sha256": "4548b14811a6cf6c4cffe1d8aafaecd810aeede60f4f5d45e026767d1ae287d8"
+    },
+    {
+      "path": "public/assets/machakos.jpg",
+      "sha256": "e350e58a009d3707050d36ef31c343ed0741f79b5d77915ae207e94c6e769386"
+    },
+    {
+      "path": "public/assets/navigation.js",
+      "sha256": "57291d36316ad774ecd9c80b004cc32fa536ba2461ca8f186560ddfaf1ef7a8a"
+    },
+    {
+      "path": "public/assets/property-sharing.css",
+      "sha256": "9af1663b9a52886310ce8597d592c2071d986036f62cb31cf10eadd9a2fa6425"
+    },
+    {
+      "path": "public/assets/property.js",
+      "sha256": "c1802b12c29b87afa77e159fc2de4a25fd55534993ecad5b6b5e57cfcee11838"
+    },
+    {
+      "path": "public/assets/responsive/acacia-track-1200.webp",
+      "sha256": "0d1bfe0ec1c872dde65f58e0a9dd187cc7d9daf90fdd3e8f147d2ab034320f20"
+    },
+    {
+      "path": "public/assets/responsive/acacia-track-480.webp",
+      "sha256": "7b0100bd106bd79a6401a0f3519eb473a3825fa77a4e912a9bbbb2a535e92898"
+    },
+    {
+      "path": "public/assets/responsive/acacia-track-800.webp",
+      "sha256": "f0bad6fad646ca99015d5b06ff071220439153aeb06a07fe2df24e08c43266c2"
+    },
+    {
+      "path": "public/assets/responsive/danlo-site-visit-1200.webp",
+      "sha256": "27919923385a7d107da0b7bd29fd7d752279a17073d1c44a5c9aa59c932cf386"
+    },
+    {
+      "path": "public/assets/responsive/danlo-site-visit-160.webp",
+      "sha256": "83c54a4a2e1e79dffad7b7ff4d2f66b60d6a870beeb7bdd36abdbe3bee1e7d13"
+    },
+    {
+      "path": "public/assets/responsive/danlo-site-visit-480.webp",
+      "sha256": "9bd754eeebe8324e91dfd060df56c9921b73ca28ef9c0265bce2898833ee18c1"
+    },
+    {
+      "path": "public/assets/responsive/danlo-site-visit-800.webp",
+      "sha256": "3f24ab79b80ff3e7cc16dcceea0a2e646360f6ba70af02ba034a9da302df3be6"
+    },
+    {
+      "path": "public/assets/responsive/evening-trees-1200.webp",
+      "sha256": "9bb58def2c35e92fbc578fe41d697ef53a7fac4ac9afa4df29ca97639deee68b"
+    },
+    {
+      "path": "public/assets/responsive/evening-trees-480.webp",
+      "sha256": "29aa39b7512079cc75214eedcce35abb44f38bc9fa1a9c7a23259c5aa97d5aff"
+    },
+    {
+      "path": "public/assets/responsive/evening-trees-800.webp",
+      "sha256": "b2509cdc8028a851e977d0fbb039d6a0e971bdb4698a4b2ecde031800fe21fc0"
+    },
+    {
+      "path": "public/assets/responsive/field-green-1200.webp",
+      "sha256": "73f609c8ddd8bdc076065364c7790baeaed2f8880b9208544ea19f6066e13568"
+    },
+    {
+      "path": "public/assets/responsive/field-green-480.webp",
+      "sha256": "78f75869543972763f9d5ccc7384cce39269c57ac78fc730e4e11dbf86be6e1b"
+    },
+    {
+      "path": "public/assets/responsive/field-green-800.webp",
+      "sha256": "602d09155344af9ada51da064e6bd7a8bbdf4ad6a8fbd2f13a8e3616a2823d7c"
+    },
+    {
+      "path": "public/assets/responsive/golden-acacia-1200.webp",
+      "sha256": "884618ccd7f0e98da7a7a1185df293e9f5ee2c1993daba90dcc2d477b2afd43c"
+    },
+    {
+      "path": "public/assets/responsive/golden-acacia-480.webp",
+      "sha256": "3195465c32e0e19ab824e6783ee50789cfdfc3ccdb8cbf3507a3f8afdc45efc9"
+    },
+    {
+      "path": "public/assets/responsive/golden-acacia-800.webp",
+      "sha256": "5c6daa279beaaba74a8dc52bd426bc762a6bf295c96968d67e624f2d0d4e50bc"
+    },
+    {
+      "path": "public/assets/responsive/grassland-1200.webp",
+      "sha256": "fe330c9d25b10db8d88e331208f1cd34306a591ba0288e439abd1e07c3f9f408"
+    },
+    {
+      "path": "public/assets/responsive/grassland-480.webp",
+      "sha256": "2b6bb6fbf4d7e6485aa8d5a7d360ecd3975c2f63fc821480a82ca02e87835a5b"
+    },
+    {
+      "path": "public/assets/responsive/grassland-800.webp",
+      "sha256": "b794bc49d7a37b3cb73c666b2a9c79092cf2f85b9230a01b14acc73a57e8005f"
+    },
+    {
+      "path": "public/assets/responsive/green-hills-1200.webp",
+      "sha256": "073c91d817c1b0faeb84dcc42adda81d64642353189c6698dc0f8dea6a63b0c6"
+    },
+    {
+      "path": "public/assets/responsive/green-hills-480.webp",
+      "sha256": "bb4f65875fc025360934c9e0e8f27b12db7acd236adf2b4fbb128ec044728072"
+    },
+    {
+      "path": "public/assets/responsive/green-hills-800.webp",
+      "sha256": "35eadd048da6ae1f530e3bb93a044649a5ddf57253419d12f978dba7df5030d0"
+    },
+    {
+      "path": "public/assets/responsive/hill-country-1200.webp",
+      "sha256": "24e1d5631c995b302e9bf46cb2071575f9223ffb1702d267a92c3f45648b57bc"
+    },
+    {
+      "path": "public/assets/responsive/hill-country-480.webp",
+      "sha256": "f0b334c3d651bdc2594c9620f0f8d31248c339377941c0048e6d89fd9db3b359"
+    },
+    {
+      "path": "public/assets/responsive/hill-country-800.webp",
+      "sha256": "2bbb23ef6e4a033d68b4cddccea20926b775f3a83511444b8d473e9edc0d33c2"
+    },
+    {
+      "path": "public/assets/responsive/machakos-1200.webp",
+      "sha256": "4f33573e89649d0ad1664829d5a2b11897e213c1e0f804ee456b0c1e380b8496"
+    },
+    {
+      "path": "public/assets/responsive/machakos-1280.webp",
+      "sha256": "7476e930e09d7b45d0b8ce64da96c1b70595304aea9bd664ce3bae8acde282e1"
+    },
+    {
+      "path": "public/assets/responsive/machakos-160.webp",
+      "sha256": "795f1a130c1daf84943c54e804be101e7196358302eacaa4bf84540d493e4346"
+    },
+    {
+      "path": "public/assets/responsive/machakos-480.webp",
+      "sha256": "8b6ed7b11cbd7acd2c39a7b110a357c3435306e134fc3e6d14b06fc96069f88c"
+    },
+    {
+      "path": "public/assets/responsive/machakos-800.webp",
+      "sha256": "5e7e6a749c2a9c58fb0935612e042fdc087b7bacc494a2685ad0896e3623de72"
+    },
+    {
+      "path": "public/assets/responsive/open-country-1200.webp",
+      "sha256": "54697861113ef38ff84518d18f3346ca0e59b20c1e137a17ee0015a0ff269e4d"
+    },
+    {
+      "path": "public/assets/responsive/open-country-480.webp",
+      "sha256": "20c11dd6c1349302f5415014caa92daad40cef91cd06f1073dbb6dd4cdad4f44"
+    },
+    {
+      "path": "public/assets/responsive/open-country-800.webp",
+      "sha256": "36720c95b5005ad86c30decf6ae179a6b05e421be67b138f347d7a3dd8ec719a"
+    },
+    {
+      "path": "public/assets/responsive/open-track-1200.webp",
+      "sha256": "a06317c7d9069b351ff5e8a1f55eb90f8f63ef3dcc7075f85f5faf9bf31b7196"
+    },
+    {
+      "path": "public/assets/responsive/open-track-480.webp",
+      "sha256": "4f4ca4bb8e3a4c187f7ac914d95784bd262798fb2a1f0df26ba0087a602cbe94"
+    },
+    {
+      "path": "public/assets/responsive/open-track-800.webp",
+      "sha256": "1efe2100df93412e1b38cf22f67910f29ca3f62780ab4c8a235261f2ae7f7be8"
+    },
+    {
+      "path": "public/assets/responsive/tree-meadow-1200.webp",
+      "sha256": "7579700635e0c4356610e9058c4550a02123d288d2e9f13d272389b2011d2835"
+    },
+    {
+      "path": "public/assets/responsive/tree-meadow-480.webp",
+      "sha256": "54bc96882628cad6d34d2d9bc807efa5bd713b943f875ce884f770fe0de19da5"
+    },
+    {
+      "path": "public/assets/responsive/tree-meadow-800.webp",
+      "sha256": "6337b8b298a093b93a9ab216968343e2f86e485c93332dfb02ee528a6bb59a69"
+    },
+    {
+      "path": "public/assets/responsive/tree-plain-1200.webp",
+      "sha256": "46b85374a017a302a7ae18ad534159a039ddf9c613a631d77645a6ec9aa4a90f"
+    },
+    {
+      "path": "public/assets/responsive/tree-plain-480.webp",
+      "sha256": "c34395bcbb1beef60cace326f4d42ac31a49958d7337b81cfc7134f7f5391e34"
+    },
+    {
+      "path": "public/assets/responsive/tree-plain-800.webp",
+      "sha256": "36989b619c54d6e418024b34dca97af26498f68d3892f75162f8ebedc03ebf09"
+    },
+    {
+      "path": "public/assets/responsive/winding-track-1200.webp",
+      "sha256": "6726a2e2648b6cb82201721534c9f78e3abf974e3a7641e5692a43c2856e59a8"
+    },
+    {
+      "path": "public/assets/responsive/winding-track-480.webp",
+      "sha256": "3aadf8c322bfa18d01aea3e5a80a9ff74e7dfded32b53a60f25bb9c984e4e0ad"
+    },
+    {
+      "path": "public/assets/responsive/winding-track-800.webp",
+      "sha256": "0cc7c38d9eb40258c3af8a0db9f48b7f16c23a4f65a60223b5ac887df4516c12"
+    },
+    {
+      "path": "public/assets/shortlist.css",
+      "sha256": "c44497137681316c56d94c16c3b12b9dcfb060de34f1b769cf29cb0ef1859422"
+    },
+    {
+      "path": "public/assets/shortlist.js",
+      "sha256": "2fb3779e9c81fdb84f6c516159a3877ef1de6af16215d51fe016cc4eddfde4a9"
+    },
+    {
+      "path": "public/dagoreti-road-karen-1-9-acres.html",
+      "sha256": "bfe4658ef9ac228d4cc3b879ff7c25cc42bb96d9a6d6c98be35c6a1a6b1e727e"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "eb278c46aaa23ca23de37aee4307dd582a06b52d5b5fadd96160d143b809efb9"
+    },
+    {
+      "path": "public/kautandini-junction-ulu-road-10-acres.html",
+      "sha256": "bebd2d99eee7667f43fd58f898ab7737cf27e9f39460be5e83588dd275a8f533"
+    },
+    {
+      "path": "public/kinanie-kamulu-corridor-21-acres.html",
+      "sha256": "4db7774310652e84622089a22e08f42c3f55e74abb26db957a8265982d4b3a24"
+    },
+    {
+      "path": "public/land-near-kinanie-market-40-acres.html",
+      "sha256": "0b2fca8737100bbafcd0207cc173fb64ebdebbc35af9906f1c2ace0824013014"
+    },
+    {
+      "path": "public/land.html",
+      "sha256": "d625f01673492a996791c358db8bfa529ca3dff2ebfe7199d38448a25618fff9"
+    },
+    {
+      "path": "public/lukenya-schoolkusyombunguo-corridor-200-acres.html",
+      "sha256": "3345e48773a2120012a54ec03c456eedc3bdec31abe5a35aacb84f1c940f5660"
+    },
+    {
+      "path": "public/muthwani-road-lukenya-92-acres.html",
+      "sha256": "2e759018c6a594e008c6d7202c8da6a80cae02c2d052509804413a81d227b303"
+    },
+    {
+      "path": "public/mutungoni-road-kinanie-85-acres.html",
+      "sha256": "acb50d74ca1ec35dd51ee0933fd03d732e0769c69ca82b5e21bc6e95504548e1"
+    },
+    {
+      "path": "public/near-kusyombunguo-hotel-29-acres.html",
+      "sha256": "89cf6c3adf0ab5beac2014dcc48977f38920347f2a8c8c6b6b1a55d6e8733ad2"
+    },
+    {
+      "path": "public/road-front-land-muthwani-road-100-acres.html",
+      "sha256": "200723f1a434b92c0219c3bee6698dd5353aaecebcfb7155da083f40b93585eb"
+    },
+    {
+      "path": "public/road-front-land-muthwani-road-150-acres.html",
+      "sha256": "c54fbb9641234f49225e3b404f0eeb18a1068780fcd1f678553f5c5b6c4afa9e"
+    },
+    {
+      "path": "public/road-front-land-muthwani-road-50-acres.html",
+      "sha256": "d43f33e15bc5e5e50eaabccd484bb09cafeef60941c05c25e24dfc425e2a1025"
+    },
+    {
+      "path": "public/robots.txt",
+      "sha256": "2710b86f94bdf3f4b2d5bb3d1a4570c35657afda2ad083d38b232ec123aa5fae"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "sha256": "e6d6bd614cb4643b188d3e654911ac665901208016a1da2c223324a0abf20737"
+    },
+    {
+      "path": "public/ulu-road-towards-petro-city-7-8-acres.html",
+      "sha256": "7472e683fedab814292839c8efd490282ebe8c2dbeadad9632569110d6dc73d0"
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
+    },
+    {
+      "path": "scripts/connector-preview/connector-preview-session.mjs",
+      "sha256": "57224ad185a25115a14fccc68d3217e55b199260c3dd98a2c807beffec1a0a9b"
+    },
+    {
+      "path": "scripts/connector-preview/host-binding.mjs",
+      "sha256": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea"
+    },
+    {
+      "path": "scripts/connector-preview/protocol.mjs",
+      "sha256": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8"
+    },
+    {
+      "path": "scripts/connector-preview/worker.mjs",
+      "sha256": "bd9c98fc68f29d975fe10508dfc9029bb681dc5789a62861d5c938bdea2064bb"
+    },
+    {
+      "path": "scripts/execution-profile.mjs",
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630"
+    },
+    {
+      "path": "scripts/install-ci.mjs",
+      "sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7"
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0"
+    },
+    {
+      "path": "scripts/install-pnpm.sh",
+      "sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0"
+    },
+    {
+      "path": "scripts/npm-install.mjs",
+      "sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6"
+    },
+    {
+      "path": "scripts/pnpm-install.mjs",
+      "sha256": "a83164e344c1947053def83b546be8115deaa827314bbaead7afe6b6451c5cdf"
+    },
+    {
+      "path": "scripts/run-framework.mjs",
+      "sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca"
+    },
+    {
+      "path": "scripts/sites-env.mjs",
+      "sha256": "21d7bde6acb9f716287e652c1b0e43ae4803d79be367ca2192fcba14740b5338"
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "sha256": "d18af7b222db748c9de257d5955b9d7f77ec350dab6321f114f0bc44c20388ac"
+    },
+    {
+      "path": "scripts/tool-environment.mjs",
+      "sha256": "6da99286e0eb7905595ca851e68983bedf94a0f93814819d61f2b1f3a0342ba2"
+    },
+    {
+      "path": "scripts/vite/connector-preview-plugin.mjs",
+      "sha256": "a6a9fe2086e302f94a3f91e3c1a68a45bb3aa07d4a79faf01b14732191eb4e80"
+    },
+    {
+      "path": "scripts/vite/sites-vite-plugin.LICENSE",
+      "sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713"
+    },
+    {
+      "path": "scripts/vite/sites-vite-plugin.ts",
+      "sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834"
+    },
+    {
+      "path": "site-home.html",
+      "sha256": "eb278c46aaa23ca23de37aee4307dd582a06b52d5b5fadd96160d143b809efb9"
+    },
+    {
+      "path": "tests/enquiries.test.mjs",
+      "sha256": "72e6b75d673be21c1300fb6efce50ac1b4fff9c458a3c200ac5a4865c78251ec"
+    },
+    {
+      "path": "tests/notifications.test.mjs",
+      "sha256": "8ffb291c86ff4fe5b6e5e84b1863d7bcfe1cbf422347041f496f444b23419985"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "a4c1cc83b63ef9d39641d3babaefffa063dccbbc93338e18017b5013d713163e"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.css",
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "22ff558b1636d251e076f74c1697c7166079861667af10922d6bc505cb8f8290"
+    },
+    {
+      "path": "worker/index.ts",
+      "sha256": "a0a10229cdda6f5fdb32234e3539007412233bb4938a671866c9295a44a3bdb6"
+    }
+  ]
+}

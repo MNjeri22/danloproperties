@@ -1,25 +1,24 @@
 # Danlo Properties Ltd
 
-Website and Gmail enquiry notification source for Danlo Properties Ltd.
+Official website source for Danlo Properties Ltd — land opportunities in Kenya.
 
-## Complete website backup
+**Hosting:** GitHub Pages, from `main` → `/docs`.
+**Domain:** https://www.danlopropertiesltd.com
 
-`website-source.zip` contains the complete website source, all 15 pages, images, frontend scripts, server-side enquiry handling, private inbox, database schema/migrations, tests, and build configuration. `SOURCE_MANIFEST.json` records the original commit and SHA-256 checksums for every source file. This backup does not include runtime credentials or private database contents.
+## Website files
 
-The **Import complete website source** Actions workflow expands the backup into `website/` so every file can also be browsed and edited normally in GitHub.
+- `docs/` — the published static website, including all 15 pages and images.
+- `website/` — the complete original application source: frontend, images, backend, database migrations, tests, and build configuration. The historical backend is preserved as source and is not used by GitHub Pages.
+- `website-source.zip` — complete source backup containing 222 tracked files.
+- `SOURCE_MANIFEST.json` — SHA-256 checksums and source provenance.
+- `github-pages-build.py` — creates the static Pages version from the full source.
 
-## Website hosting migration
+## Enquiries
 
-The website is being moved to GitHub Pages. Pages serves the frontend; durable enquiry storage, the private inbox, and automatic Gmail sending require a separate server. The backend source is included in this repository, but is not executed by GitHub Pages.
+The GitHub-only website prepares an email for visitors to review and send through their own email app to danlopropertiesltd@gmail.com. It does not save enquiry records or run a private inbox. Automatic Gmail notification code is retained for possible future server integration, but is not active on GitHub Pages.
 
-## Gmail email function
+## Rebuilding
 
-The root `gmail-notifications.mjs` module sends from and to **danlopropertiesltd@gmail.com** after verifying the connected Google account. See `EMAIL_SETUP.md` for authorization requirements. Alerts are not active until the server integration and credentials are configured.
+Run the **Import complete website source** workflow once to expand and verify the backup. It also runs `python3 github-pages-build.py` and commits the resulting website files. Later edits can be made directly in `docs/`; running the build script regenerates that folder from `website/public/`.
 
-Run the standalone module tests:
-
-```sh
-node --test gmail-notifications.test.mjs
-```
-
-Existing public repository: MNjeri22/danloproperties.
+No credentials or private customer records belong in this public repository.

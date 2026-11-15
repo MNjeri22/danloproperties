@@ -40,6 +40,7 @@ jobs:
              assert n==1,file
             if 'href="assets/properties-menu.css"' not in html:html=html.replace('</head>','<link rel="stylesheet" href="assets/properties-menu.css"></head>')
             if 'src="assets/properties-menu.js"' not in html:html=html.replace('</body>','<script src="assets/properties-menu.js"></script></body>')
+            html=html.replace('href="assets/properties-menu.css"','href="assets/properties-menu.css?v=2"').replace('src="assets/properties-menu.js"','src="assets/properties-menu.js?v=2"')
             assert html.count('id="properties-mega"')==1,file
             assert all(f'land.html?category={key}' in html for key,_,_ in categories)
             file.write_text(html);count+=1

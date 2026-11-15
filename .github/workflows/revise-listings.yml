@@ -1,0 +1,119 @@
+name: Revise confirmed land listings
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/revise-listings.yml
+permissions:
+  contents: write
+  pages: write
+jobs:
+  revise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Revise and verify listing content
+        run: |
+          python3 - <<'PYLISTINGS'
+          from pathlib import Path
+          from html import escape
+          import json
+          import re
+          
+          root = Path('.')
+          location = 'Near Kusyombunguo Hotel along Muthwani Road, after Simba Cement / Golden Africa off Mombasa Road.'
+          access = 'Approximately 200 metres from the road currently under construction for tarmacking.'
+          development = 'The vendor reports development activity by Asian and Chinese investors in the surrounding area.'
+          updates = {
+              'kinanie85': {
+                  'acres': 85, 'price': 4.5, 'negotiable': True,
+                  'description': 'Two blocks of 42.5 acres each along Mutungoni Road, Kinanie, in Mavoko municipality. KSh 4.5 million per acre, negotiable.',
+                  'details': ['Two blocks of 42.5 acres each; 85 acres combined.', 'Located along Mutungoni Road, Kinanie, in Mavoko municipality.', 'Vendor asking price: KSh 4.5 million per acre, negotiable.'],
+              },
+              'lukenya92': {
+                  'acres': 92, 'price': 3.8,
+                  'description': '92 acres near Kusyombunguo Hotel along Muthwani Road, approximately 200 metres from the road under construction for tarmacking. KSh 3.8 million per acre.',
+                  'details': [location, access, 'Comprises 40 + 42 + 10 acres, held under three titles by one owner.', 'Asking price: KSh 3.8 million per acre.', development],
+              },
+              'lukenya29': {
+                  'acres': 29, 'price': 3.8,
+                  'description': '29 acres near Kusyombunguo Hotel along Muthwani Road, approximately 200 metres from the road under construction for tarmacking. KSh 3.8 million per acre.',
+                  'details': [location, access, 'Land size: 29 acres. Asking price: KSh 3.8 million per acre.', development],
+              },
+              'acacia20': {
+                  'acres': 20, 'price': 14,
+                  'description': '20 acres in Kitengela-Acacia, approximately 3.5 kilometres from Namanga Highway. KSh 14 million per acre.',
+                  'details': ['Located in Acacia, Kitengela.', 'Land size: 20 acres.', 'Approximately 3.5 kilometres from Namanga Highway.', 'Asking price: KSh 14 million per acre.'],
+              },
+              'karen1-9': {
+                  'acres': 1.9, 'price': 86,
+                  'description': '1.9 acres in Karen touching Dagoreti Road. KSh 86 million per acre.',
+                  'details': ['Located in Karen, touching Dagoreti Road.', 'Land size: 1.9 acres.', 'Asking price: KSh 86 million per acre.'],
+              },
+          }
+          for acres in [50, 100, 150]:
+              updates[f'lukenya{acres}'] = {
+                  'acres': acres, 'price': 4,
+                  'description': f'{acres} acres touching Muthwani Road near Kusyombunguo Hotel, Lukenya. A separate road-front offering at KSh 4 million per acre.',
+                  'details': [location, f'Land size: {acres} acres, touching Muthwani Road.', 'Separate road-front offerings of 50, 100, and 150 acres are available at KSh 4 million per acre.', 'The road is currently under construction for tarmacking.', development],
+              }
+          
+          def patch_jsonld(value, description):
+              if isinstance(value, dict):
+                  return {k: description if k == 'description' else patch_jsonld(v, description) for k, v in value.items()}
+              if isinstance(value, list):
+                  return [patch_jsonld(v, description) for v in value]
+              return value
+          
+          for folder in [root / 'docs', root / 'website/public']:
+              inventory_file = folder / 'assets/land-data.js'
+              source = inventory_file.read_text()
+              match = re.match(r'const landInventory = (\[.*?\]);', source, re.S)
+              assert match, f'Inventory not found in {inventory_file}'
+              inventory = json.loads(match.group(1))
+              found = set()
+              for item in inventory:
+                  if item['id'] not in updates:
+                      continue
+                  change = updates[item['id']]
+                  # Keep the current image, title, URL, tags, and other listing metadata.
+                  item.update(change)
+                  found.add(item['id'])
+                  file = folder / item['url']
+                  html = file.read_text()
+                  html, count = re.subn(r'(<p class="property-subtitle">).*?(</p>)', lambda m: m[1] + escape(item['description']) + m[2], html, count=1, flags=re.S)
+                  assert count == 1, file
+                  html, count = re.subn(r'(<ul class="property-points">).*?(</ul>)', lambda m: m[1] + ''.join('<li>' + escape(x) + '</li>' for x in item['details']) + m[2], html, count=1, flags=re.S)
+                  assert count == 1, file
+                  for attribute, key in [('name', 'description'), ('property', 'og:description'), ('name', 'twitter:description')]:
+                      pattern = r'(<meta ' + attribute + r'="' + re.escape(key) + r'" content=")[^"]*(")'
+                      html = re.sub(pattern, lambda m: m[1] + escape(item['description'], quote=True) + m[2], html)
+                  html = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', lambda m: m[1] + json.dumps(patch_jsonld(json.loads(m[2]), item['description']), ensure_ascii=False) + m[3], html, flags=re.S)
+                  file.write_text(html)
+                  assert escape(item['description']) in html
+                  assert all(escape(detail) in html for detail in item['details'])
+              assert found == updates.keys(), found
+              inventory_file.write_text('const landInventory = ' + json.dumps(inventory, ensure_ascii=False) + ';' + source[match.end():])
+              print(f'Updated and verified {len(found)} listings in {folder}')
+          
+          # The public catalogue and the retained source must describe the same inventory.
+          assert (root/'docs/assets/land-data.js').read_text() == (root/'website/public/assets/land-data.js').read_text()
+          print('Catalogue, sharing data, metadata, and all eight property pages are consistent.')
+          PYLISTINGS
+          node --check docs/assets/land-data.js
+          node --check website/public/assets/land-data.js
+      - name: Save updated website in GitHub
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs website/public
+          if ! git diff --cached --quiet; then
+            git commit -m 'Revise eight land listings with confirmed pricing and access details'
+            git push
+          fi
+      - name: Publish updated GitHub Pages website
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"

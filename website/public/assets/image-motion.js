@@ -1,0 +1,2 @@
+
+(()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('image-motion-pending');entry.target.classList.add('image-motion-visible');observer.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px 50px 0px'});document.querySelectorAll('.land-card-cover>img,.property-visual.landscape-photo>img').forEach(image=>{image.classList.add('image-motion-pending');observer.observe(image)})})();

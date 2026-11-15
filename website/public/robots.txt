@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danlo-properties.nmhwc-7205.chatgpt.site/sitemap.xml

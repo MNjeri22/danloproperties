@@ -2,12 +2,10 @@
  const root=document.querySelector('.properties-nav');
  if(!root)return;
  const trigger=root.querySelector('.properties-toggle'),panel=root.querySelector('.properties-mega');
- const nav=document.getElementById('navigation'),desktop=matchMedia('(min-width:901px)'),hover=matchMedia('(hover:hover) and (pointer:fine)');
+ const nav=document.getElementById('navigation'),desktop=matchMedia('(min-width:901px)');
  let leaveTimer;
  function setOpen(open,restore=false){clearTimeout(leaveTimer);panel.hidden=!open;trigger.setAttribute('aria-expanded',String(open));if(restore)trigger.focus();}
  trigger.addEventListener('click',()=>setOpen(panel.hidden));
- root.addEventListener('mouseenter',()=>{if(desktop.matches&&hover.matches)setOpen(true)});
- root.addEventListener('mouseleave',()=>{if(desktop.matches&&hover.matches)leaveTimer=setTimeout(()=>{if(!root.contains(document.activeElement))setOpen(false)},180)});
  root.addEventListener('focusout',event=>{if(!root.contains(event.relatedTarget))setOpen(false)});
  root.addEventListener('keydown',event=>{
   if(event.key==='Escape'&&!panel.hidden){event.preventDefault();event.stopPropagation();setOpen(false,true)}

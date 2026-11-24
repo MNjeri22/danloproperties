@@ -1,0 +1,27 @@
+.property-map {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+.property-map h2 {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem;
+}
+.property-map p {
+  color: var(--gray);
+  margin: 0 0 .75rem;
+}
+.property-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 35vw, 22rem);
+  margin-bottom: .75rem;
+  border: 1px solid var(--line);
+}
+.property-map a {
+  display: inline-block;
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}

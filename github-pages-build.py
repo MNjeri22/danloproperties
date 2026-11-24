@@ -21,5 +21,6 @@ for p in target.rglob('*'):
 assert '/api/enquiries' not in (target/'assets'/'inquiry.js').read_text()
 for p in target.glob('*.html'):
  assert old_origin not in p.read_text()
-assert len(list(target.glob('*.html')))==15
-print('Prepared 15 static pages for GitHub Pages, with email enquiries and the custom domain.')
+page_count = len(list(source.glob('*.html')))
+assert len(list(target.glob('*.html'))) == page_count
+print(f'Prepared {page_count} static pages for GitHub Pages, with email enquiries and the custom domain.')
